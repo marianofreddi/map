@@ -7,6 +7,7 @@
 	<title>Mapa mepa</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- https://material.io/tools/icons/?style=baseline -->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
   <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
@@ -54,7 +55,16 @@
 					    </div>
 					    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
 					      <div class="card-body">
-					        Listados de congres
+					        <a class="salon1" href="#">Sur Villa Tesei</a>
+					      </div>
+					      <div class="card-body">
+					        <a href="#">Ranelagh Español</a>
+					      </div>
+					      <div class="card-body">
+					        <a href="#">Udaondo</a>
+					      </div>
+					      <div class="card-body">
+					        <a href="#">Betel</a>
 					      </div>
 					    </div>
 					  </div>
@@ -81,7 +91,6 @@
 	</div>
 
 <script>
-	
 
 	var mymap = L.map('mapid').setView([-34.629297, -58.537452], 14);
 
@@ -107,8 +116,13 @@
 	function onLocationFound(e) {
     console.log(e); 
     // e.heading will contain the user's heading (in degrees) if it's available, and if not it will be NaN. This would allow you to point a marker in the same direction the user is pointed. 
-   L.marker(e.latlng).addTo(mymap);
-}
+   L.marker(e.latlng).addTo(mymap);}
+
+  $('.salon1').on('click', function(){
+  var mymap = L.map('mapid').setView([-34.629297, -58.537452], 16);
+	
+
+  })
 
 </script>
 
